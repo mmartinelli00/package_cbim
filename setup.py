@@ -18,6 +18,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    url = 'https://github.com/mmartinelli00/package_cbim.git',
     python_requires='>=3.7',
     install_requires=requirements
     
