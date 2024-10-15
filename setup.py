@@ -2,12 +2,10 @@ import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
-    
+
 setuptools.setup(
     name="cbim_utils",
-    version="0.0.1",
+    version="0.1.5",
     author_email="m.martinelli@cbim.it",
     description="Various utilities",
     long_description=long_description,
@@ -19,7 +17,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     url = 'https://github.com/mmartinelli00/package_cbim.git',
-    python_requires='>=3.7',
-    install_requires=requirements
-    
+    install_requires=[
+        'PyMySQL==1.1.1',
+        ],
+    extras_require = {
+        "dev": ["pytest>=7.0", "twine>=4.0.2"],
+    }
 )
